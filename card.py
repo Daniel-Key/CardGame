@@ -1,8 +1,11 @@
-class Card:
+from card_keyword import *
 
-    invulnerability_charges = 0
+class Card:
     
     def __init__(self, game, player, name, keywords, power, health, position):
+        self.invulnerability_charges = 0
+        self.keyword_triggered = {}
+
         self.id = game.unique_card_id
         game.unique_card_id += 1
         self.player = player
@@ -18,3 +21,7 @@ class Card:
         for keyword in self.keywords:
             self.power += keyword.power_modifier
             self.health += keyword.health_modifier
+            self.keyword_triggered[keyword] = False
+
+            if keyword == Shielded: 
+                self.invulnerability_charges += 1

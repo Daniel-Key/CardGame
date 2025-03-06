@@ -5,9 +5,8 @@ game = None
 
 def main():
     game = Game()
-    position_cards(game)
     while not game.ended:
-        take_turn(game)
+        game.take_turn()
 
 
 if __name__ == '__main__':
