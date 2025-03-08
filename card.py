@@ -5,6 +5,7 @@ class Card:
     def __init__(self, game, player, name, keywords, power, health, position):
         self.invulnerability_charges = 0
         self.keyword_triggered = {}
+        self.statuses = []
 
         self.id = game.unique_card_id
         game.unique_card_id += 1

@@ -24,6 +24,9 @@ def print_board(player):
         for keyword in card.keywords:
             board += ", "
             board += str(keyword.name)
+        for status in card.statuses:
+            board += ", "
+            board += str(status.name)
         board += "]"
     print(board)
 
