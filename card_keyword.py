@@ -98,3 +98,30 @@ class Skulking(CardKeyword):
     power_modifier = -3
     keyword_description = "On death, steals a random enemy card"
     stage = AttackStage.AFTER_ATTACK
+
+class Distractible(CardKeyword):
+    name = "Distractible"
+    power_modifier = 1
+    keyword_description = "Deals damage randomly split between all enemy cards"
+
+class Rooted(CardKeyword):
+    name = "Rooted"
+    health_modifier = 2
+    keyword_description = "+2 health while this remains in its initial position"
+    stage = AttackStage.AFTER_ATTACK
+
+class Disruptive(CardKeyword):
+    name = "Disruptive"
+    keyword_description = "Swaps position of attacked card with an adjacent one"
+    stage = AttackStage.AFTER_ATTACK
+
+class Generous(CardKeyword):
+    name = "Generous"
+    power_modifier = -1
+    health_modifier = -1
+    keyword_description = "At start of game distributes its stats randomly to friendly cards before being removed"
+
+class Charmed(CardKeyword):
+    name = "Charmed"
+    power_modifier = 1
+    keyword_description = "Deal no damage to the rightmost card"

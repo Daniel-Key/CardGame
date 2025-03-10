@@ -33,3 +33,7 @@ def print_board(player):
 
 def get_other_player(game, player):
     return game.players.get((player.identifier + 1) % 2)
+
+
+def are_cards_adjacent(card1, card2):
+    return card1.player == card2.player and abs(card1.position - card2.position) == 1

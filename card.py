@@ -26,3 +26,5 @@ class Card:
 
             if keyword == Shielded: 
                 self.invulnerability_charges += 1
+            if keyword == Rooted:
+                self.initial_position = self.position
